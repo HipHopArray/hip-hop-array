@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+      <title>HIP HOP ARRAY</title>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+ <!--      <script rel="script" type="text/javascript" href="../assets/ng-file-upload-shim.min.js"></script>
+      <script rel="script" type="text/javascript" href="../assets/ng-file-upload.min.js"></script> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+      
+  </head>
+  <body ng-controller='app.fileUploadCtrl'>
+    <div class="card-panel teal lighten-2">
+      <h1>HIP HOP ARRAY</h1>
+    </div>
+    <form name="myForm">
+      <fieldset>
+      <legend>What do you have in mind now?</legend><br>
+      
+      <input type="text" ng-model="url" placeholder="type your URL here"/>
+      <button ng-click="poop()">SUBMIT URL</button><br>
+     
+      <!-- <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" required
+               ngf-model-invalid="errorFile">
+      <button class="btn waves-effect waves-light" type="submit" ng-click="uploadPic(picFile)">submit</button>
+      <i ng-show="myForm.file.$error.required">*required</i><br>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click=" --><!-- picFile = null" ng-show="picFile">Remove</button> -->
+      </fieldset>
+    </form>
+
+    <script src="app/controllers/index.js"></script>
+    <!-- <script src="app/controllers/fileUpload.js"></script> -->
+  </body>
+  <!-- <script rel="script" type="text/javascript" href="controllers/index.js"></script> -->
+
+</html>

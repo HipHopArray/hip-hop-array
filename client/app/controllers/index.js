@@ -1,16 +1,11 @@
 'use strict';
+angular.module('app', [
+])
 
-angular.module('app.index', ['ngRoute'])
+.controller('app.fileUploadCtrl', function($scope) {
+  $scope.url = '';
 
-.config(function($routeProvider, $httpProvider) {
-  $routeProvider
-  .when('/', {
-    // not sure about the route name
-    templateUrl: '/./views/index.html', 
-    controller: 'indexCtrl'
-  })
-})
-
-.controller('indexCtrl', function($scope) {
-
+  $scope.poop = function() {
+    console.log($scope.url);
+  }
 });
