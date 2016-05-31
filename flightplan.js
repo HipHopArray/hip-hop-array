@@ -1,16 +1,16 @@
 var plan = require('flightplan');
 
 var appName = 'hip-hop-array';
-var username = 'deploy';
+var username = 'nate';
 var startFile = 'server/server.js';
 // configuration
 var tmpDir = appName + '-' + new Date().getTime();
-
+console.log(process.env.SSH_AUTH_SOCK)
 plan.target('production', [
   {
-    host: '159.203.204.48',
-    username: 'deploy',
-    // port: 2222,
+    host: '159.203.193.78',
+    username: 'nate',
+    password: 'hiphoparray',
     agent: process.env.SSH_AUTH_SOCK
   },
 ]);
@@ -34,8 +34,7 @@ plan.remote(function(remote){
 
   remote.log('Install dependecies');
   remote.sudo('npm --production --prefix  ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
-  // remote.sudo('cd ~/' + tmpDir);
-  // ./node_modules/bower/bin/
+
   remote.sudo('~/' + tmpDir + '/node_modules/bower/bin/bower install ~/' + tmpDir + '/bower.json', {user: username});
   remote.sudo('cp -R ~/bower_components/ ~/' + tmpDir + '/client', {user: username});
 
