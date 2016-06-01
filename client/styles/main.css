@@ -144,10 +144,6 @@ a img{
   padding-bottom: 30px;
 }
 
-.mdl-card__title-text {
-  padding: 0px 50px 0px 50px;
-}
-
 .myRecipes_cell {
   padding-bottom: 30px;
 }
@@ -238,6 +234,11 @@ a img{
 
 .mdl-card__title-text {
   font-size: 16px;
+}
+
+.aboutMe_Title {
+  font-size: 16px;
+  text-align: center;
 }
 
 .android-card-container {
