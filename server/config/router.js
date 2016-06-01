@@ -19,7 +19,6 @@ var upload = multer({storage: storage});
 module.exports = function (app) {
   var uploadMiddleware = upload.array('photos');
   
-  // app.post('/recipes', requestHandler.photoHandler);
   app.post('/ingredients', uploadMiddleware, requestHandler.photoHandler);  
 };
 
