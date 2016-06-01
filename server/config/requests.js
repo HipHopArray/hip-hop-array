@@ -32,7 +32,6 @@ module.exports = {
     var ingredientJoin = reqInfo.join(', ');
     request('http://food2fork.com/api/search?key=' + FoodToForkAPI + '&q=' + ingredientJoin, function (err, response, body) {
       if (err) throw err;
-      console.log('recipes', body);
       res.send(body);
     });
   }
